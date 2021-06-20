@@ -2,6 +2,7 @@ package uz.gita.pushgitfromas
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -13,5 +14,9 @@ class MainActivity : AppCompatActivity() {
     fun createLog(msg: String, tag: String) {
         // help for you
         Log.d(tag, msg)
+    }
+
+    fun createToast(msg: String) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 }

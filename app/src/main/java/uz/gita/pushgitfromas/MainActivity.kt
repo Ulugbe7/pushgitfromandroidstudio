@@ -3,6 +3,7 @@ package uz.gita.pushgitfromas
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -18,5 +19,10 @@ class MainActivity : AppCompatActivity() {
 
     fun createToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+    }
+
+    fun createDialog(msg: String) {
+        val alertDialog = AlertDialog.Builder(this)
+        alertDialog.setTitle(msg).create().show()
     }
 }
